@@ -34,9 +34,7 @@ export function Country() {
       {isLoading && <LoadingIndicator small />}
       {name && currency_code ? (
         <CountryContainer>
-          <div>
-            {name} - {currency_code}
-          </div>
+          {name} - {currency_code}
         </CountryContainer>
       ) : error ? (
         <ErrorText>{error}</ErrorText>
