@@ -3,7 +3,7 @@ import { request } from 'utils/request';
 import { actions } from './actions';
 
 export function* fetchCountryById(action) {
-  const requestURL = `https://api.carerev.com/api/v1/countries/877`;
+  const requestURL = `https://api.carerev.com/api/v1/countries/${action.payload.id}`;
 
   try {
     const country = yield call(request, requestURL);
